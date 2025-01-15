@@ -1,0 +1,84 @@
+{
+  "name": "ephraim-mago/api-core",
+  "description": "The API Core.",
+  "keywords": [
+    "framework",
+    "api",
+    "core"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "support": {
+    "issues": "https://github.com/ephraim-mago/api-core/issues",
+    "source": "https://github.com/ephraim-mago/api-core"
+  },
+  "authors": [
+    {
+      "name": "Ephraïm Mago",
+      "email": "ephraimmago@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "ext-ctype": "*",
+    "ext-filter": "*",
+    "ext-hash": "*",
+    "ext-mbstring": "*",
+    "ext-openssl": "*",
+    "ext-session": "*",
+    "ext-tokenizer": "*",
+    "composer-runtime-api": "^2.2",
+    "filp/whoops": "^2.16",
+    "guzzlehttp/psr7": "^2.7",
+    "psr/container": "^2.0",
+    "psr/http-factory": "^1.1",
+    "psr/http-message": "^2.0",
+    "psr/http-server-handler": "^1.0",
+    "psr/http-server-middleware": "^1.0",
+    "vlucas/phpdotenv": "^5.6"
+  },
+  "require-dev": {
+    "ext-gmp": "*",
+    "symfony/var-dumper": "^7.2"
+  },
+  "provide": {
+    "psr/container-implementation": "1.1|2.0",
+    "psr/log-implementation": "1.0|2.0|3.0",
+    "psr/simple-cache-implementation": "1.0|2.0|3.0"
+  },
+  "autoload": {
+    "files": [
+      "src/Framework/Core/helpers.php",
+      "src/Framework/Filesystem/functions.php",
+      "src/Framework/Support/helpers.php"
+    ],
+    "psr-4": {
+      "App\\": "app/",
+      "Framework\\": "src/Framework/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Framework\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    }
+  },
+  "suggest": {
+    "ext-fileinfo": "Required to use the Filesystem class.",
+    "ext-ftp": "Required to use the Flysystem FTP driver.",
+    "ext-pdo": "Required to use all database features.",
+    "filp/whoops": "Required for friendly error pages in development (^2.14.3)."
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
