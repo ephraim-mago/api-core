@@ -15,8 +15,8 @@ class ComposerScripts
     public static function postAutoloadDump(Event $event)
     {
         $vendorDir = dirname($event->getComposer()->getConfig()->get('vendor-dir'));
-        $coreConfigDir = $vendorDir . '/ephraim-mago/api-core/config';
-        $skeletonConfigDir = $vendorDir . '/../config';
+        $coreConfigDir = $vendorDir . '/vendor/ephraim-mago/api-core/config';
+        $skeletonConfigDir = $vendorDir . '/config';
 
         if (is_dir($coreConfigDir)) {
             // Créer le dossier config du skeleton s'il n'existe pas
