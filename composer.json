@@ -7,7 +7,7 @@
     "core"
   ],
   "license": "MIT",
-  "type": "project",
+  "type": "library",
   "support": {
     "issues": "https://github.com/ephraim-mago/api-core/issues",
     "source": "https://github.com/ephraim-mago/api-core"
